@@ -1,0 +1,58 @@
+Git work of hashing 
+git use graph data structure 
+git store the data in key value pair formate 
+                  key =>Hashing 
+                  Value=>actual data 
+It used crptographic hashing algorithm called SHA1 
+It store the data in hexadecimal formate 
+
+
+1)git rm --cached <filename> moves files back to working area to staging area 
+
+
+2)git restore =>it removes all files changes from the statging area to be commited This can be usefull if we did some distry place of code and now to no more wnt it.Instead of deleting every changes line by line,we can restore it or you can say restore last clean version of the file 
+
+3)To Restore All Files:
+git restore .
+
+4)Restoring Files from a Specific Commit  
+
+git restore --source=<commit> <file>
+
+5)Discarding Changes in working directory 
+
+git restore --source=HEAD --staged .
+
+-------------------------------------->git restore<------------------------------------------
+6)restore from working area 
+git restore fileName
+7)restore from statging area 
+git restore --staged <filename>
+                     =>this will come to the working area from the stataging area 
+                     =>my last stataging area code come to the working area 
+
+8)Diff between git rm and git restore 
+
+ans:if we want to move the whole file back to untracked state,then we do git rm,otherwise if we just want the changes to me moved to working area or statging area then we use git restore
+
+9)if we went to see the difference of between to version(commits)
+
+git diff firstCommit secondComit 
+
+10)git commit (vim editor open for commit message)
+
+11)git remote =>it list down all the remote 
+
+12)git remote rm <remoteName> this command will delete the remote connection 
+
+13)git remote rename <oldname> <newName>   =>this command rename the remote connection 
+
+14)How to send files there are untrack files 
+
+git stash --include-untracked 
+
+15)git stash with tag meaning full name 
+git stash save "login data with jwt tag"
+
+16)commit amend 
+git commit --amend "updated message"
